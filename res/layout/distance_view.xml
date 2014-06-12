@@ -35,27 +35,31 @@
         android:layout_alignParentRight="true"
         android:layout_marginRight="14dp"
         android:ems="10"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        android:text="0" />
 
-    <RadioButton
-        android:id="@+id/milesBtn"
+    <RadioGroup
+        android:id="@+id/radioGroup1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/textView1"
         android:layout_below="@+id/editText1"
-        android:layout_marginTop="20dp"
-        android:checked="true"
-        android:onClick="handleClick"
-        android:text="Miles" />
+        android:layout_marginTop="24dp" >
 
-    <RadioButton
-        android:id="@+id/kmBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/milesBtn"
-        android:layout_below="@+id/milesBtn"
-        android:checked="false"
-        android:onClick="handleClick"
-        android:text="Kilometers" />
+        <RadioButton
+            android:id="@+id/milesBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="handleClick"
+            android:text="Miles" />
+
+        <RadioButton
+            android:id="@+id/kmBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="handleClick"
+            android:text="Kilometers" />
+    </RadioGroup>
 
 </RelativeLayout>
