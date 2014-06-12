@@ -18,28 +18,28 @@ public class WeightActivity extends Activity {
     	boolean checked = ((RadioButton) view).isChecked();
     	
     	EditText txt = (EditText) findViewById(R.id.editText1);
-    	double distance = Double.parseDouble(txt.getText().toString());
+    	double weight = Double.parseDouble(txt.getText().toString());
     	
     	switch(view.getId()) {
-    	case R.id.milesBtn:
+    	case R.id.poundsBtn:
     		if(checked)
-    			txt.setText(kmToMiles(distance));
+    			txt.setText(kilosToPounds(weight));
     		break;
-    	case R.id.kmBtn:
+    	case R.id.kiloBtn:
     		if(checked)
-    			txt.setText(milesToKm(distance));
+    			txt.setText(poundsToKilos(weight));
     		break;
     	}
     }
     
-    public String milesToKm(double miles){
-    	double km = miles * 1.609;
-    	return String.valueOf(km);
+    public String poundsToKilos(double weight){
+    	double kilos = weight / 2.2046;
+    	return String.valueOf(kilos);
     }
     
-    public String kmToMiles(double km){
-    	double miles = km / 1.609;
-    	return String.valueOf(miles);
+    public String kilosToPounds(double weight){
+    	double pounds = weight * 2.2046;
+    	return String.valueOf(pounds);
     }
 
 }
