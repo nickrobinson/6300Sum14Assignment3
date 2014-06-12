@@ -28,10 +28,26 @@ public class MainActivity extends ActionBarActivity {
                     .commit();
         }
         
-        final Button button = (Button) findViewById(R.id.distBtn);
-        button.setOnClickListener(new View.OnClickListener() {
+        final Button distButton = (Button) findViewById(R.id.distBtn);
+        distButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             	Intent nextScreen = new Intent(getApplicationContext(), DistanceActivity.class);
+            	startActivity(nextScreen);
+            }
+        });
+        
+        final Button tempButton = (Button) findViewById(R.id.tempBtn);
+        tempButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	Intent nextScreen = new Intent(getApplicationContext(), TemperatureActivity.class);
+            	startActivity(nextScreen);
+            }
+        });
+        
+        final Button weightButton = (Button) findViewById(R.id.weightBtn);
+        weightButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	Intent nextScreen = new Intent(getApplicationContext(), WeightActivity.class);
             	startActivity(nextScreen);
             }
         });
