@@ -36,7 +36,7 @@ public class WeightActivity extends ActionBarActivity {
         return true;
     }
     
-    public void handleClick(View view){
+    /*public void handleClick(View view){
     	boolean checked = ((RadioButton) view).isChecked();
     	
     	EditText txt = (EditText) findViewById(R.id.text1);
@@ -52,7 +52,7 @@ public class WeightActivity extends ActionBarActivity {
     			txt.setText(milesToKm(distance));
     		break;
     	}
-    }
+    }*/
     
     public String milesToKm(double miles){
     	double km = miles * 1.609;

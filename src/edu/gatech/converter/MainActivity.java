@@ -3,12 +3,14 @@ package edu.gatech.converter;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBar;
 import android.support.v4.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
 import android.os.Build;
@@ -25,6 +27,14 @@ public class MainActivity extends ActionBarActivity {
                     .add(R.id.container, new PlaceholderFragment())
                     .commit();
         }
+        
+        final Button button = (Button) findViewById(R.id.distBtn);
+        button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            	Intent nextScreen = new Intent(getApplicationContext(), DistanceActivity.class);
+            	startActivity(nextScreen);
+            }
+        });
     }
 
 
@@ -36,33 +46,6 @@ public class MainActivity extends ActionBarActivity {
         return true;
     }
     
-    public void handleClick(View view){
-    	boolean checked = ((RadioButton) view).isChecked();
-    	
-    	EditText txt = (EditText) findViewById(R.id.text1);
-    	double distance = Double.parseDouble(txt.getText().toString());
-    	
-    	switch(view.getId()) {
-    	case R.id.radio0:
-    		if(checked)
-    			txt.setText(kmToMiles(distance));
-    		break;
-    	case R.id.radio1:
-    		if(checked)
-    			txt.setText(milesToKm(distance));
-    		break;
-    	}
-    }
-    
-    public String milesToKm(double miles){
-    	double km = miles * 1.609;
-    	return String.valueOf(km);
-    }
-    
-    public String kmToMiles(double km){
-    	double miles = km / 1.609;
-    	return String.valueOf(miles);
-    }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {

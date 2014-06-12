@@ -23,8 +23,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
         android:layout_marginTop="11dp"
-        android:text="Distance"
-        android:onClick="handleClick" />
+        android:text="Distance" />
 
     <Button
         android:id="@+id/tempBtn"
@@ -34,8 +33,7 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/weightBtn"
         android:layout_marginTop="16dp"
-        android:text="Temperature"
-        android:onClick="handleClick" />
+        android:text="Temperature"/>
 
     <Button
         android:id="@+id/weightBtn"
@@ -45,7 +43,6 @@
         android:layout_alignParentRight="true"
         android:layout_below="@+id/distBtn"
         android:layout_marginTop="17dp"
-        android:text="Weight"
-        android:onClick="handleClick" />
+        android:text="Weight"/>
 
 </RelativeLayout>
