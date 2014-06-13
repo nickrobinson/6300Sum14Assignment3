@@ -18,7 +18,17 @@ public class WeightActivity extends Activity {
     	boolean checked = ((RadioButton) view).isChecked();
     	
     	EditText txt = (EditText) findViewById(R.id.editText1);
-    	double weight = Double.parseDouble(txt.getText().toString());
+    	
+    	//We need to check if the text field is empty and if so set the value to 0
+    	double weight;
+    	if(!txt.getText().toString().matches(""))
+    	{
+    		weight = Double.parseDouble(txt.getText().toString());
+    	}
+    	else
+    	{
+    		weight = 0;
+    	}
     	
     	switch(view.getId()) {
     	case R.id.poundsBtn:

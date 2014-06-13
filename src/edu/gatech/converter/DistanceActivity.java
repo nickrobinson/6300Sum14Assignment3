@@ -18,7 +18,18 @@ public class DistanceActivity extends Activity {
     	boolean checked = ((RadioButton) view).isChecked();
     	
     	EditText txt = (EditText) findViewById(R.id.editText1);
-    	double distance = Double.parseDouble(txt.getText().toString());
+    	
+    	//We need to check if the text field is empty and if so set the value to 0
+    	double distance;
+    	if(!txt.getText().toString().matches(""))
+    	{
+    		distance = Double.parseDouble(txt.getText().toString());
+    	}
+    	else
+    	{
+    		distance = 0;
+    	}
+    	
     	
     	switch(view.getId()) {
     	case R.id.milesBtn:

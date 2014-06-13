@@ -18,7 +18,17 @@ public class TemperatureActivity extends Activity {
     	boolean checked = ((RadioButton) view).isChecked();
     	
     	EditText txt = (EditText) findViewById(R.id.editText1);
-    	double temp = Double.parseDouble(txt.getText().toString());
+ 	
+    	//We need to check if the text field is empty and if so set the value to 0
+    	double temp;
+    	if(!txt.getText().toString().matches(""))
+    	{
+    		temp = Double.parseDouble(txt.getText().toString());
+    	}
+    	else
+    	{
+    		temp = 0;
+    	}
     	
     	switch(view.getId()) {
     	case R.id.farenheitBtn:
