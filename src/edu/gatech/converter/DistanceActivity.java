@@ -30,7 +30,6 @@ public class DistanceActivity extends Activity {
     		distance = 0;
     	}
     	
-    	
     	switch(view.getId()) {
     	case R.id.milesBtn:
     		if(checked)
