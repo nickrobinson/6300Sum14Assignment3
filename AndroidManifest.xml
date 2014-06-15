@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.gatech.converter"
+    package="edu.gatech.unitconverter"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="edu.gatech.converter.MainActivity"
+            android:name="edu.gatech.unitconverter.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,15 +24,15 @@
         </activity>
         <activity
             android:label="@string/app_name"
-            android:name="edu.gatech.converter.DistanceActivity" >
+            android:name="edu.gatech.unitconverter.DistanceActivity" >
         </activity>
         <activity
             android:label="@string/app_name"
-            android:name="edu.gatech.converter.TemperatureActivity" >
+            android:name="edu.gatech.unitconverter.TemperatureActivity" >
         </activity>
         <activity
             android:label="@string/app_name"
-            android:name="edu.gatech.converter.WeightActivity" >
+            android:name="edu.gatech.unitconverter.WeightActivity" >
         </activity>
     </application>
 
